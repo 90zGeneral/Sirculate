@@ -12,6 +12,7 @@
 		D522129A1D562B01003DAF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52212981D562B01003DAF70 /* Main.storyboard */; };
 		D522129C1D562B01003DAF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D522129B1D562B01003DAF70 /* Assets.xcassets */; };
 		D522129F1D562B01003DAF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D522129D1D562B01003DAF70 /* LaunchScreen.storyboard */; };
+		D52212A71D56457A003DAF70 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52212A61D56457A003DAF70 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D522129B1D562B01003DAF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D522129E1D562B01003DAF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D52212A01D562B01003DAF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D52212A61D56457A003DAF70 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				D52212941D562B01003DAF70 /* AppDelegate.swift */,
 				D52212961D562B01003DAF70 /* ViewController.swift */,
+				D52212A61D56457A003DAF70 /* GameViewController.swift */,
 				D52212981D562B01003DAF70 /* Main.storyboard */,
 				D522129B1D562B01003DAF70 /* Assets.xcassets */,
 				D522129D1D562B01003DAF70 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D52212971D562B01003DAF70 /* ViewController.swift in Sources */,
+				D52212A71D56457A003DAF70 /* GameViewController.swift in Sources */,
 				D52212951D562B01003DAF70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				D52212A51D562B01003DAF70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
