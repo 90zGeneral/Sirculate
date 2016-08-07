@@ -9,11 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBAction func playButton(sender: AnyObject) {
-        presentViewController(GameViewController, animated: true, completion: nil)
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,8 +9,26 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
-    @IBAction func goBack(sender: AnyObject) {
+    
+    //Update the scores
+    @IBOutlet var highScoreLabel: UILabel!
+    @IBOutlet var CurrentScoreLabel: UILabel!
+    
+    //Determines how the position of the ball
+    @IBOutlet var fallingBall: UIImageView!
+    
+    //To increment the score
+    var highScore = 0
+    var currentScore = 0
+    
+    //Holds the different colors for the ball animation and random selection
+    var ballColorsArray = ["redBall", "greenBall", "blueBall", "yellowBall"]
+    
+    //Controls the rate of the falling ball
+    var timer = NSTimer()
+    
+    //Restart the game after round ends
+    @IBAction func replay(sender: AnyObject) {
         
     }
     

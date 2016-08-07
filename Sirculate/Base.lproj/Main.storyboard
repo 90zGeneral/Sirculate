@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" backgroundImage="play-button-icon"/>
                                 <connections>
-                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTr-1G-Bco"/>
+                                    <segue destination="t6Q-QJ-mxi" kind="show" id="M3E-fN-r14"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,16 +82,28 @@
                                 <rect key="frame" x="0.0" y="538" width="32" height="32"/>
                                 <state key="normal" backgroundImage="goBack"/>
                                 <connections>
-                                    <action selector="goBack:" destination="t6Q-QJ-mxi" eventType="touchUpInside" id="vZg-WC-wNI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="db9-wK-kBn"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowBall" translatesAutoresizingMaskIntoConstraints="NO" id="opE-yz-aK9">
                                 <rect key="frame" x="150" y="17" width="20" height="20"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-6d-iAH">
+                                <rect key="frame" x="138" y="104" width="45" height="40"/>
+                                <state key="normal" backgroundImage="replay2"/>
+                                <connections>
+                                    <action selector="replay:" destination="t6Q-QJ-mxi" eventType="touchUpInside" id="Cda-yw-P7Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="CurrentScoreLabel" destination="caf-CU-tND" id="6W7-EP-hNb"/>
+                        <outlet property="fallingBall" destination="opE-yz-aK9" id="afi-h3-BwA"/>
+                        <outlet property="highScoreLabel" destination="M60-VG-gJi" id="jvQ-Oa-t4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdk-3l-gSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +113,7 @@
     <resources>
         <image name="goBack" width="32" height="32"/>
         <image name="play-button-icon" width="32" height="32"/>
+        <image name="replay2" width="32" height="30"/>
         <image name="yellowBall" width="16" height="16"/>
     </resources>
 </document>
