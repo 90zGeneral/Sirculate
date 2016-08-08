@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowBall" translatesAutoresizingMaskIntoConstraints="NO" id="opE-yz-aK9">
-                                <rect key="frame" x="150" y="17" width="20" height="20"/>
+                                <rect key="frame" x="150" y="10" width="20" height="20"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-6d-iAH">
                                 <rect key="frame" x="138" y="104" width="45" height="40"/>

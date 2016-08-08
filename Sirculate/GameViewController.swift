@@ -30,12 +30,22 @@ class GameViewController: UIViewController {
     //Restart the game after round ends
     @IBAction func replay(sender: AnyObject) {
         
+        currentScore = 0
+        
+    }
+    
+    func update() {
+        
+        fallingBall.center = CGPointMake(fallingBall.center.x, fallingBall.center.y + 1)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
