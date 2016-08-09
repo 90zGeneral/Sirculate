@@ -45,7 +45,10 @@ class GameViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+        fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
