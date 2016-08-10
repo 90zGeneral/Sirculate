@@ -103,6 +103,7 @@
                         <outlet property="CurrentScoreLabel" destination="caf-CU-tND" id="6W7-EP-hNb"/>
                         <outlet property="fallingBall" destination="opE-yz-aK9" id="afi-h3-BwA"/>
                         <outlet property="highScoreLabel" destination="M60-VG-gJi" id="jvQ-Oa-t4c"/>
+                        <outlet property="replayLabel" destination="j0W-6d-iAH" id="9Wq-tF-g5z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdk-3l-gSC" userLabel="First Responder" sceneMemberID="firstResponder"/>

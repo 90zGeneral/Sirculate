@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet var highScoreLabel: UILabel!
     @IBOutlet var CurrentScoreLabel: UILabel!
     
+    @IBOutlet var replayLabel: UIButton!
+    
     //Determines how the position of the ball
     @IBOutlet var fallingBall: UIImageView!
     
@@ -32,6 +34,11 @@ class GameViewController: UIViewController {
         
         currentScore = 0
         
+        let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+        fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        
     }
     
     func update() {
@@ -49,6 +56,8 @@ class GameViewController: UIViewController {
         fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
         
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        
+        replayLabel.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
