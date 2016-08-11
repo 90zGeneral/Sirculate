@@ -88,9 +88,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowBall" translatesAutoresizingMaskIntoConstraints="NO" id="opE-yz-aK9">
                                 <rect key="frame" x="150" y="10" width="20" height="20"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-6d-iAH">
-                                <rect key="frame" x="138" y="104" width="45" height="40"/>
-                                <state key="normal" backgroundImage="replay2"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iW-qj-uRo">
+                                <rect key="frame" x="73" y="345" width="175" height="170"/>
+                                <state key="normal" backgroundImage="squareWithTriangles"/>
+                                <connections>
+                                    <action selector="gameButton:" destination="t6Q-QJ-mxi" eventType="touchUpInside" id="8FR-LW-cXg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-6d-iAH">
+                                <rect key="frame" x="129" y="399" width="62" height="62"/>
+                                <state key="normal" backgroundImage="replay4"/>
                                 <connections>
                                     <action selector="replay:" destination="t6Q-QJ-mxi" eventType="touchUpInside" id="Cda-yw-P7Y"/>
                                 </connections>
@@ -114,7 +121,8 @@
     <resources>
         <image name="goBack" width="32" height="32"/>
         <image name="play-button-icon" width="32" height="32"/>
-        <image name="replay2" width="32" height="30"/>
+        <image name="replay4" width="662" height="597"/>
+        <image name="squareWithTriangles" width="384" height="386"/>
         <image name="yellowBall" width="16" height="16"/>
     </resources>
 </document>
