@@ -148,6 +148,7 @@
                     <connections>
                         <outlet property="CurrentScoreLabel" destination="caf-CU-tND" id="6W7-EP-hNb"/>
                         <outlet property="fallingBall" destination="opE-yz-aK9" id="afi-h3-BwA"/>
+                        <outlet property="gameButtonLabel" destination="2iW-qj-uRo" id="IO9-2H-jFX"/>
                         <outlet property="highScoreLabel" destination="M60-VG-gJi" id="jvQ-Oa-t4c"/>
                         <outlet property="replayLabel" destination="j0W-6d-iAH" id="9Wq-tF-g5z"/>
                     </connections>

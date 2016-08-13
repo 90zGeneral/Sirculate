@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet var highScoreLabel: UILabel!
     @IBOutlet var CurrentScoreLabel: UILabel!
     
+    @IBOutlet var gameButtonLabel: UIButton!
+    
     @IBOutlet var replayLabel: UIButton!
     
     //Determines how the position of the ball
@@ -41,7 +43,13 @@ class GameViewController: UIViewController {
         
     }
     
+    //Getting the button to rotate and match falling ball color
     @IBAction func gameButton(sender: AnyObject) {
+        
+       UIView.animateWithDuration(0.07) {
+            self.gameButtonLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
+        }
+        
     }
     
     func update() {
