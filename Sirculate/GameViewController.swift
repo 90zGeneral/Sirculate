@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
     var highScore = 0
     var currentScore = 0
     
+    var isBallFalling = false
+    
     //Holds the different colors for the ball animation and random selection
     var ballColorsArray = ["redBall", "greenBall", "blueBall", "yellowBall"]
     
@@ -46,7 +48,7 @@ class GameViewController: UIViewController {
     //Getting the button to rotate and match falling ball color
     @IBAction func gameButton(sender: AnyObject) {
         
-       UIView.animateWithDuration(0.07) {
+       UIView.animateWithDuration(0.05) {
             self.gameButtonLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
         }
         
