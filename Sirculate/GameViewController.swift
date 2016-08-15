@@ -48,9 +48,17 @@ class GameViewController: UIViewController {
     //Getting the button to rotate and match falling ball color
     @IBAction func gameButton(sender: AnyObject) {
         
-       UIView.animateWithDuration(0.05) {
-            self.gameButtonLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
-        }
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.fromValue = 0.0
+        rotateAnimation.toValue = CGFloat(M_PI)
+        
+//       UIView.animateWithDuration(0.05) {
+//            self.gameButtonLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
+//        }
+        
+        let duration = 0.5
+        rotateAnimation.duration = duration
+        gameButtonLabel.layer.addAnimation(rotateAnimation, forKey: nil)
         
     }
     
