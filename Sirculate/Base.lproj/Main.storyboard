@@ -102,9 +102,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="db9-wK-kBn"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowBall" translatesAutoresizingMaskIntoConstraints="NO" id="opE-yz-aK9">
-                                <rect key="frame" x="150" y="10" width="20" height="20"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iW-qj-uRo">
                                 <rect key="frame" x="73" y="328" width="175" height="170"/>
                                 <constraints>
@@ -127,6 +124,9 @@
                                     <action selector="replay:" destination="t6Q-QJ-mxi" eventType="touchUpInside" id="Cda-yw-P7Y"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowBall" translatesAutoresizingMaskIntoConstraints="NO" id="opE-yz-aK9">
+                                <rect key="frame" x="150" y="10" width="20" height="20"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

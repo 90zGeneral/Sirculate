@@ -56,9 +56,9 @@ class GameViewController: UIViewController {
 //        rotateAnimation.duration = duration
 //        gameButtonLabel.layer.addAnimation(rotateAnimation, forKey: nil)
         
-       UIView.animateWithDuration(0.05) {
+        UIView.animateWithDuration(0.05, animations: ({
             self.gameButtonLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
-        }
+        }))
     }
     
     func update() {
