@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
     var currentScore = 0
     
     var isBallFalling = false
+    var gameButtonPosition = 0
     
     //Holds the different colors for the ball animation and random selection
     var ballColorsArray = ["redBall", "greenBall", "blueBall", "yellowBall"]
@@ -50,6 +51,20 @@ class GameViewController: UIViewController {
         
         UIView.animateWithDuration(0.05) { 
             self.gameButtonLabel.transform = CGAffineTransformRotate(self.gameButtonLabel.transform, CGFloat(M_PI_2))
+        }
+        
+        if gameButtonPosition == 0 {
+            
+            
+        }else if gameButtonPosition == 1 {
+            
+            
+        }else if gameButtonPosition == 2 {
+            
+            
+        }else {
+            
+            
         }
     
     }

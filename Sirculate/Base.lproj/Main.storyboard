@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cch-0m-Tds" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7jS-gN-nHt"/>
                             <constraint firstItem="Cch-0m-Tds" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GoC-Wc-5kg"/>
