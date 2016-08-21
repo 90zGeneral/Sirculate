@@ -52,6 +52,18 @@ class GameViewController: UIViewController {
         UIView.animateWithDuration(0.05) { 
             self.gameButtonLabel.transform = CGAffineTransformRotate(self.gameButtonLabel.transform, CGFloat(M_PI_2))
         }
+    }
+    
+    func update() {
+        
+        fallingBall.center = CGPointMake(fallingBall.center.x, fallingBall.center.y + 1)
+        
+        if fallingBall.center.y == 565 {
+            fallingBall.center.y = -15
+            let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+            fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
+            replayLabel.hidden = false
+        }
         
         if gameButtonPosition == 0 {
             
@@ -65,19 +77,6 @@ class GameViewController: UIViewController {
         }else {
             
             
-        }
-    
-    }
-    
-    func update() {
-        
-        fallingBall.center = CGPointMake(fallingBall.center.x, fallingBall.center.y + 1)
-        
-        if fallingBall.center.y == 565 {
-            fallingBall.center.y = -15
-            let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
-            fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
-            replayLabel.hidden = false
         }
         
     }
