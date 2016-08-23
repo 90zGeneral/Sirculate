@@ -58,7 +58,7 @@ class GameViewController: UIViewController {
         
         fallingBall.center = CGPointMake(fallingBall.center.x, fallingBall.center.y + 1)
         
-        if fallingBall.center.y == 565 {
+        if fallingBall.center.y == 325 {
             fallingBall.center.y = -15
             let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
             fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
