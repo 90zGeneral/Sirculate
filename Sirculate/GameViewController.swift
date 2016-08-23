@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
     var gameButtonPosition = 0
     
     //Holds the different colors for the ball animation and random selection
-    var ballColorsArray = ["redBall", "greenBall", "blueBall", "yellowBall"]
+    var ballColorsArray = ["blueBall", "yellowBall", "redBall", "greenBall"]
     
     //Controls the rate of the falling ball
     var timer = NSTimer()
@@ -51,6 +51,13 @@ class GameViewController: UIViewController {
         
         UIView.animateWithDuration(0.05) { 
             self.gameButtonLabel.transform = CGAffineTransformRotate(self.gameButtonLabel.transform, CGFloat(M_PI_2))
+            if self.gameButtonPosition < 3 {
+                self.gameButtonPosition += 1
+                print(self.gameButtonPosition)
+            }else {
+                self.gameButtonPosition = 0
+                print(self.gameButtonPosition)
+            }
         }
     }
     
@@ -58,27 +65,18 @@ class GameViewController: UIViewController {
         
         fallingBall.center = CGPointMake(fallingBall.center.x, fallingBall.center.y + 1)
         
-        if fallingBall.center.y == 325 {
-            fallingBall.center.y = -15
+        if fallingBall.center.y == 323 {
             let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+            if gameButtonPosition == ballColorsArray.indexOf(ballColorsArray[randomBallColor]) {
+                currentScore += 1
+                CurrentScoreLabel.text = "\(currentScore)"
+                
+            }
+            fallingBall.center.y = -15
+//            let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
             fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
-            replayLabel.hidden = false
+//            replayLabel.hidden = false
         }
-        
-        if gameButtonPosition == 0 {
-            
-            
-        }else if gameButtonPosition == 1 {
-            
-            
-        }else if gameButtonPosition == 2 {
-            
-            
-        }else {
-            
-            
-        }
-        
     }
     
     override func viewDidLoad() {
