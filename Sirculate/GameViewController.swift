@@ -67,15 +67,20 @@ class GameViewController: UIViewController {
         
         if fallingBall.center.y == 323 {
             for arrIndex in ballColorsArray {
-                if gameButtonPosition == 
-                currentScore += 1
-                CurrentScoreLabel.text = "\(currentScore)"
-                
+                let ballIndex = ballColorsArray.indexOf(arrIndex)
+                if gameButtonPosition == ballIndex {
+                    currentScore += 1
+                    CurrentScoreLabel.text = "\(currentScore)"
+                    fallingBall.center.y = -15
+                    if fallingBall.center.y == -15 {
+                        let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+                        fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
+                    }
+                }else {
+                    replayLabel.hidden = false
+                    gameButtonLabel.enabled = false
+                }
             }
-            fallingBall.center.y = -15
-            let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
-            fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
-//            replayLabel.hidden = false
         }
     }
     
