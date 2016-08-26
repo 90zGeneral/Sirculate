@@ -27,6 +27,7 @@ class GameViewController: UIViewController {
     
     var isBallFalling = false
     var gameButtonPosition = 0
+    var randomBallColor: Int = 0
     
     //Holds the different colors for the ball animation and random selection
     var ballColorsArray = ["blueBall", "yellowBall", "redBall", "greenBall"]
@@ -36,14 +37,15 @@ class GameViewController: UIViewController {
     
     //Restart the game after round ends
     @IBAction func replay(sender: AnyObject) {
-        
+        fallingBall.center.y = -15
         currentScore = 0
-        
-        let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+        CurrentScoreLabel.text = "\(currentScore)"
+        fallingBall.hidden = false
+        gameButtonLabel.enabled = true
+        replayLabel.hidden = true
+        randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
         fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
     //Getting the button to rotate and match falling ball color
@@ -66,20 +68,17 @@ class GameViewController: UIViewController {
         fallingBall.center = CGPointMake(fallingBall.center.x, fallingBall.center.y + 1)
         
         if fallingBall.center.y == 323 {
-            for arrIndex in ballColorsArray {
-                let ballIndex = ballColorsArray.indexOf(arrIndex)
-                if gameButtonPosition == ballIndex {
-                    currentScore += 1
-                    CurrentScoreLabel.text = "\(currentScore)"
-                    fallingBall.center.y = -15
-                    if fallingBall.center.y == -15 {
-                        let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
-                        fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
-                    }
-                }else {
-                    replayLabel.hidden = false
-                    gameButtonLabel.enabled = false
-                }
+            if gameButtonPosition == randomBallColor {
+                currentScore += 1
+                CurrentScoreLabel.text = "\(currentScore)"
+                fallingBall.center.y = -15
+                randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+                fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
+            }else {
+                replayLabel.hidden = false
+                gameButtonLabel.enabled = false
+                fallingBall.hidden = true
+                timer.invalidate()
             }
         }
     }
@@ -89,10 +88,10 @@ class GameViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
+        randomBallColor = Int(arc4random_uniform(UInt32(ballColorsArray.count)))
         fallingBall.image = UIImage(named: ballColorsArray[randomBallColor])
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.008, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         
         replayLabel.hidden = true
     }
