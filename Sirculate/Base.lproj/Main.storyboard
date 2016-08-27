@@ -102,7 +102,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="db9-wK-kBn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iW-qj-uRo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iW-qj-uRo">
                                 <rect key="frame" x="73" y="328" width="175" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="OhY-bP-evv"/>
